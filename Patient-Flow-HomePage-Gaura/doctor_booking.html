@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Doctor Booking | Telafaya</title>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+	  <link rel="stylesheet" href="style.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://use.fontawesome.com/fedf2ad782.js"></script>
+	  <script src="custom.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  	<div class="container">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="col-xs-12 block_for_search">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="index.html"><img src="assets/home/logo.png" class="img-responsive" alt="Telafaya" title="Telafaya" /></a>
+				    </div>
+				    <form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="city_search drop">
+								<div>
+									<span><img src="assets/home/map.svg" alt="Location" title="Location" /></span>
+									<span>Mumbai</span>
+									<ul class="dropdown-menu drop_list city_list">
+										<li>Mumbai</li>
+										<li>Delhi</li>
+										<li>Chennai</li>
+										<li>Kolkata</li>
+									</ul>
+								</div>
+								<span><img src="assets/home/arrow_dwn.svg" alt="Chevron_down" title="Chevron_down" /></span>
+							</div>
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      	<ul class="nav navbar-nav navbar-right">
+					        <!-- <li><a class="button" href="#">Free Listing</a></li> -->
+					        <li>
+					        	<a href="#" class="userimage">
+					        		<img src="assets/home/user.svg" alt="User" title="User">
+					        		<span>Login/Register</span>
+					    	    </a>
+					    	</li>
+				      	</ul>
+				    </div>
+				</div>
+			</div>
+		</nav>
+		<div class="header_box">
+			<div class="container">
+				<form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+		    </div>
+		</div>
+		<div class="page_content colored_bg">
+			<div class="section section_1">
+				<div class="container">
+					<div class="breadcrumb_container col-xs-12">
+						<nav aria-label="breadcrumb" role="navigation">
+						  <ol class="breadcrumb">
+						    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						    <li class="breadcrumb-item"><a href="#">Mumbai</a></li>
+						    <li class="breadcrumb-item"><a href="#">Dermatologists</a></li>
+						    <li class="breadcrumb-item active" aria-current="page">Dr.Sanjeev</li>
+						  </ol>
+						</nav>
+					</div>
+					<!-- <div id="rateYo"></div> -->
+					<div class="col-xs-12 details_container">
+						<div class="whole_section">
+							<div class="journey_indicators">
+								<ul class="bullet_indicators">
+									<li class="active" rel="1"><span class="numbers">1</span><span class="journey_title">date & time</span></li>
+								    <li class="disabled" rel="2"><span class="numbers">2</span><span class="journey_title">Details</span></li>
+								    <li class="disabled" rel="3"><span class="numbers">3</span><span class="journey_title">payment</span></li>
+								    <li class="disabled" rel="4"><span class="numbers">4</span><span class="journey_title">confirmation</span></li>
+								</ul>
+							</div>
+							<div class="journey">
+								<div class="journey_content">
+									<div class="journey_steps active step1" data-rel="1">
+										<div class="static_txt">
+											<h1>Appointment Date & Time</h1>
+											<p>Set your appointment </p>
+										</div>
+										<div class="static_txt">
+											<h1>Patient Details</h1>
+											<p>Fill correct information</p>
+										</div>
+									</div>
+									<div class="journey_steps step2" data-rel="2">
+										<div class="patient_details">
+											<div class="static_txt">
+												<h1>Appointment time </h1>
+												<p>Set appointment time from the available slot</p>
+											</div>
+											<div>
+												<form class="patient_info">
+													<div><input type="text" class="patient_form patient_fname" name="" placeholder="First Name" required=""></div>
+													<div><input type="text" class="patient_form patient_lname" name="" placeholder="Last Name" required=""></div>
+													<div><input type="text" class="patient_form patient_dob" name="" placeholder="Date of Birth" required=""></div>
+													<div>
+														<select class="patient_form patient_reason">
+															<option>Reason</option>
+															<option>Reason 1</option>
+															<option>Reason 2</option>
+															<option>Reason 3</option>
+														</select>
+													</div>
+													<div><input type="text" class="patient_form patient_mob" name="" placeholder="Mobile" required=""></div>
+													<div><input type="email" class="patient_form patient_email" name="" placeholder="Email" required=""></div>
+													<div>
+														<ul>
+															<li>Emergency<input type="checkbox" name="type" ><div class="check"></div></li>
+															<li>Follow up<input type="checkbox" name="type" ><div class="check"></div></li>
+															<li>Routine<input type="checkbox" name="type" ><div class="check"></div></li>
+														</ul>
+													</div>
+													<div>
+														<ul>
+															<li class="male">
+																<img class="icon_selected" src="assets/icons/male_active.png" class="img-responsive" alt="" title="" />
+																<img class="icon_unselected" src="assets/icons/male_inactive.png" class="img-responsive" alt="" title="" />
+															</li>
+															<li class="female">
+																<img class="icon_selected" src="assets/icons/female_active.png" class="img-responsive" alt="" title="" />
+																<img class="icon_unselected" src="assets/icons/female_inactive.png" class="img-responsive" alt="" title="" />
+															</li>
+														</ul>
+													</div>
+													<!-- <div class="sort_by drop">
+														<div class="">
+															<span>Relevance</span>
+															<ul class="dropdown-menu drop_list sort_list" style="display: none;">
+																<li>Price</li>
+																<li>Experience</li>
+																<li>Sample</li>
+																<li>Sample</li>
+															</ul>
+														</div>
+														<span><img src="assets/home/arrow_dwn.svg" alt="Chevron_down" title="Chevron_down"></span>
+													</div> -->
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="journey_steps step3" data-rel="3">
+										<ul class="nav nav-pills paymentmodemenu">
+										    <li class="active"><a class="paymentmode" href="#" rel="payAtClinic">Pay at clinic</a></li>
+										    <li><a class="paymentmode" href="#" rel="savedCards">saved cards</a></li>
+										    <li><a class="paymentmode" href="#" rel="creditCard">credit card</a></li>
+										    <li><a class="paymentmode" href="#" rel="debitCard">debit card</a></li>
+										    <li><a class="paymentmode" href="#" rel="netBanking">net banking</a></li>
+										    <li><a class="paymentmode" href="#" rel="mPesa">m-pesa</a></li>
+										</ul>
+										<select class="select dropSelect">
+										 	<option value="payAtClinic">pay at clinic</option>
+										 	<option value="savedCards">saved cards</option>
+										 	<option value="creditCard">credit card</option>
+										 	<option value="debitCard">debit card</option>
+										 	<option value="netBanking">net banking</option>
+										 	<option value="mPesa">m-pesa</option>
+										</select>
+										<div class="payment_content">
+										 	<div class="payment_section" data-rel="payAtClinic"></div>
+										 	<div class="payment_section" data-rel="savedCards">
+										 		<div class="archivecards">
+										 			<div class="saved_card_1 storedcard">
+										 				<div class="cardtype">
+										 					<img src="assets/icons/visa_icon.png" alt="card" title="" class="img-responsive"/>
+										 				</div>
+										 				<div class="cardnum">
+										 					<p class="heading">card number</p>
+										 					<h3 class="content">2514 - 2536 - 5874 - 3625</h3>
+										 				</div>
+										 				<div class="details">
+										 					<div class="cardholder">
+										 						<p class="heading">card holder</p>
+										 						<h3 class="content">Arvind patel</h3>
+										 					</div>
+										 					<div class="cardexp">
+										 						<p class="heading">Expires</p>
+										 						<h3 class="content">09/23</h3>
+										 					</div>
+										 				</div>
+										 			</div>
+										 			<div class="saved_card_2 storedcard">
+										 				<div class="cardtype">
+										 					<img src="assets/icons/visa_icon.png" alt="card" title="" class="img-responsive"/>
+										 				</div>
+										 				<div class="cardnum">
+										 					<p class="heading">card number</p>
+										 					<h3 class="content">2514 - 2536 - 5874 - 3625</h3>
+										 				</div>
+										 				<div class="details">
+										 					<div class="cardholder">
+										 						<p class="heading">card holder</p>
+										 						<h3 class="content">Arvind patel</h3>
+										 					</div>
+										 					<div class="cardexp">
+										 						<p class="heading">Expires</p>
+										 						<h3 class="content">09/23</h3>
+										 					</div>
+										 				</div>
+										 				<div class="selected"><img src="assets/icons/selected.png" class="img-responsive" alt="" title="" /></div>
+										 			</div>
+										 			<div class="saved_card_3 storedcard">
+										 				<div class="cardtype">
+										 					<img src="assets/icons/visa_icon.png" alt="card" title="" class="img-responsive"/>
+										 				</div>
+										 				<div class="cardnum">
+										 					<p class="heading">card number</p>
+										 					<h3 class="content">2514 - 2536 - 5874 - 3625</h3>
+										 				</div>
+										 				<div class="details">
+										 					<div class="cardholder">
+										 						<p class="heading">card holder</p>
+										 						<h3 class="content">Arvind patel</h3>
+										 					</div>
+										 					<div class="cardexp">
+										 						<p class="heading">Expires</p>
+										 						<h3 class="content">09/23</h3>
+										 					</div>
+										 				</div>
+										 			</div>
+										 		</div>
+										 		<form class="patient_info">
+										 			<div><input type="text" class="patient_form patient_promocode" name="" placeholder="Promo Code" required=""></div>
+													<div><input type="text" class="patient_form patient_cvv" name="" placeholder="CVV" required=""></div>
+												</form>
+										 	</div>
+										 	<div class="payment_section" data-rel="creditCard">
+										 		<form class="patient_info">
+													<div><input type="text" class="patient_form patient_cardno" name="" placeholder="Card Number" required=""></div>
+													<div><input type="text" class="patient_form patient_fname" name="" placeholder="Name on Card" required=""></div>
+													<div>
+														<select class="patient_form patient_dob expirydate">
+															<option>Reason</option>
+															<option>Reason 1</option>
+															<option>Reason 2</option>
+															<option>Reason 3</option>
+														</select>
+													</div>
+													<div><input type="text" class="patient_form patient_cvv" name="" placeholder="CVV" required=""></div>
+													<div><input type="text" class="patient_form patient_promocode" name="" placeholder="Promo Code" required=""></div>
+												</form>
+										 	</div>
+										 	<div class="payment_section" data-rel="debitCard"></div>
+										 	<div class="payment_section" data-rel="netBanking">
+										 		<form class="patient_info">
+													<div>
+														<select class="patient_form patient_bank selectbank">
+															<option>ICICI</option>
+															<option>HSBC</option>
+															<option>AXIS</option>
+															<option>HDFC</option>
+														</select>
+													</div>
+													<div><input type="text" class="patient_form patient_promocode" name="" placeholder="Promo Code" required=""></div>
+												</form>
+										 	</div>
+										 	<div class="payment_section" data-rel="mPesa"></div>
+										</div>
+									</div>
+									<div class="journey_steps step4" data-rel="4">
+										<div class="payment_laststep">
+											<div class="animate_msg">
+												<span><i class="fa fa-thumbs-up fa-4x"></i></span>
+												<div class="static_txt">
+													<h1>Succesful</h1>
+													<p>Appointment has been successfully Confirmed</p>
+												</div>
+											</div>
+											<div class="booking_summary">
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/appointment_date_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Appointment Date</div>
+														<div class="content">28<sup>th</sup> July 2017, 10:30AM</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/payment_type_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Payment</div>
+														<div class="content">$<span>30</span></div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/doc_confirmed_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Doctor</div>
+														<div class="content">Sanjeev Verma</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/patient_name_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Patienet</div>
+														<div class="content">Shivank Sharma</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/routine_type_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Reason</div>
+														<div class="content">Monthly Checkup</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/routine_type_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Type</div>
+														<div class="content">Routine</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/payment_method_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Payment Method</div>
+														<div class="content">Credit Card</div>
+													</div>
+												</div>
+												<div class="summary_sec">
+													<div class="summary_icon">
+														<img src="assets/icons/reference_id_icon.png" class="img-responsive" alt="calendar" title="" />
+													</div>
+													<div class="summary_name">
+														<div class="title">Reference ID</div>
+														<div class="content">4257675478</div>
+													</div>
+												</div>
+											</div>
+											<div class="doc_summary">
+												<div class="static_txt">
+													<h1>Doctor Address</h1>
+													<p>Doctor information for further requirements</p>
+												</div>
+												<div class="doc_address">
+										    		<span>Address:</span>
+										    		<div>
+										    			Hiranandani Hospital Road, Hill Side Avenue, 
+														Powai, Mumbai, Maharashtra 400076
+										    		</div>
+										    	</div>
+										    	<div class="doc_timings">
+										    		<span>Timings:</span>
+										    		<div>
+										    			<ul>
+										    				<li><b>Mon - Sat</b><span>(10:30 AM - 15:30, 17:30 - 16:30)</span></li>
+										    				<li><b>Sun</b><span>(11:30 AM - 16:30PM)</span></li>
+										    			</ul>
+										    		</div>
+										    	</div>
+										    	<div class="doc_photos">
+										    		<span>Photos:</span>
+										    		<div class="thumb_wrapper">
+										    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+										    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+										    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+										    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+										    		</div>
+										    	</div>
+										    	<div class="doc_map">
+										    		<span>Map:</span>
+										    		<div class="map_container">
+														<div id="map_canvas2"  class="map"></div>
+										    		</div>
+										    	</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="side_content">
+									<div class="visual_details">
+										<div class="dp_container">
+											<img src="assets/icons/sample_doc.png" class="img-responsive dp" alt="profile picture" />
+											<img src="assets/icons/verified.png" class="img-responsive verified" alt="profile picture" />
+										</div>
+										<div class="doc_name">
+											Dr. Sanjeev
+										</div>
+										<div class="doc_rating">
+											<div class="rateYo"></div>
+										</div>
+									</div>
+									<div class="doctor_spec">
+										<div>dentist</div>
+										<div>Cosmetic</div>
+										<div>Surgeon</div>
+										<div>Asthetic</div>
+										<div>Orthodontist</div>
+										<div>dentist</div>
+									</div>
+									<div class="doctor_fee">
+										<div>Fee</div>
+										<div class="doc_price">$60.00</div>
+									</div>
+									<div class="continue">
+										<a class="button_style button book" id="continue_journey" data-id="">Continue</a>
+									</div>
+									<div class="address">
+										<p>Hiranandani Hospital Road, 
+										Hill Side Avenue, Powai, Mumbai, 
+										Maharashtra 400076</p>
+										<a>Get Direction</a>
+										<div id="map_canvas" class="map"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bg">
+	      <div class="container">
+	        <div class="main_footer_box">
+	          <div class="content_box">
+	            <div class="content">
+	              <div class="title_item">
+	                <div>ABOUT</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">About</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Blog</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Careers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Press</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Contact Us</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR PATIENETS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Ask free health questions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for doctors</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for hospitals</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for diagnostics</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR DOCTORS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Consult</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Health Feed</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">For clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Ray by Teleafya</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR HOSPITALS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Insta by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Qikwell by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Querent by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Reach</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>MORE</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Help</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Developers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Privacy Policy</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Terms &amp; Conditions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Healthcare directory</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="social_icons"><a href="https://www.facebook.com/teleafya/" target="_blank" class="icon"><img src="assets/home/facebook_icon.svg"></a><a href="https://plus.google.com/104835625733873407665" target="_blank" class="icon"><img src="assets/home/google_plus_icon.svg"></a><a href="#" class="icon"><img src="assets/home/instagram_icon.svg"></a><a href="https://www.youtube.com/channel/UCAd9mi97aHj3qMnhhlEsd_A" target="_blank" class="icon youtube"><img src="assets/home/youtube_icon.svg"></a></div>
+	        </div>
+	      </div>
+	      <div class="divider_footer"></div>
+	      <div class="container">
+	        <div class="copyright_box">
+	          <div class="text-block">© Copyright teleafya. Developed by : arvind patel. -Website Best viewed in IE 11 &amp; Higher, Google Chrome</div>
+	        </div>
+	      </div>
+	    </div>
+    	<script>
+			var map1, map2;
+			function initMap() {
+		        var uluru = {lat: -25.363, lng: 131.044};
+		        var map = new google.maps.Map(document.getElementById('map_canvas'), {
+		          zoom: 4,
+		          center: uluru
+		        });
+		        var marker = new google.maps.Marker({
+		          position: uluru,
+		          map: map
+		        });
+		        var uluru1 = {lat: -25.363, lng: 131.044};
+		        var map2 = new google.maps.Map(document.getElementById('map_canvas2'), {
+		          zoom: 6,
+		          center: uluru1
+		        });
+		        var marker1 = new google.maps.Marker({
+		          position: uluru1,
+		          map: map2
+		        });
+		    }
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+	    </script>
+	</body>
+</html>

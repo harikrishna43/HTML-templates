@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Doctor Listing | Telafaya</title>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+	  <link rel="stylesheet" href="style.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://use.fontawesome.com/fedf2ad782.js"></script>
+	  <script src="custom.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  	<div class="container">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="col-xs-12 block_for_search">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="index.html"><img src="assets/home/logo.png" class="img-responsive" alt="Telafaya" title="Telafaya" /></a>
+				    </div>
+				    <form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="city_search drop">
+								<div>
+									<span><img src="assets/home/map.svg" alt="Location" title="Location" /></span>
+									<span>Mumbai</span>
+									<ul class="dropdown-menu drop_list city_list">
+										<li>Mumbai</li>
+										<li>Delhi</li>
+										<li>Chennai</li>
+										<li>Kolkata</li>
+									</ul>
+								</div>
+								<span><img src="assets/home/arrow_dwn.svg" alt="Chevron_down" title="Chevron_down" /></span>
+							</div>
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      	<ul class="nav navbar-nav navbar-right">
+					        <!-- <li><a class="button" href="#">Free Listing</a></li> -->
+					        <li>
+					        	<a href="#" class="userimage">
+					        		<img src="assets/home/user.svg" alt="User" title="User">
+					        		<span>Login/Register</span>
+					    	    </a>
+					    	</li>
+				      	</ul>
+				    </div>
+				</div>
+			</div>
+		</nav>
+		<div class="header_box">
+			<div class="container">
+				<form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+		    </div>
+		</div>
+		<div class="page_content colored_bg">
+			<div class="section section_1">
+				<div class="container">
+					<div class="col-sm-3 col-xs-12">
+						<div class="search_list_filters">
+							<div class="filter_box"><h1 class="filter_heading">Filters <span>Reset All</span></h1></div>
+							<div class="budget filter_box">
+								<h2 class="filter_heading">Budget <span>Clear</span></h2>
+								<div class="slider_range_box">
+									<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+									<div id="slider-range"></div>
+							        <!-- <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
+							        <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000"> -->
+							    </div>
+							</div>
+							<div class="gender filter_box">
+								<h2 class="filter_heading">Gender <span>Clear</span></h2>
+								<ul>
+									<li class="checkbox">Male Doctor <input type="checkbox" name="gender" value="" data-value=""><div class="check"></div></li>
+									<li class="checkbox">Female Doctor <input type="checkbox" name="gender" value=""  data-value=""><div class="check"></div></li>
+								</ul>
+							</div>
+							<div class="filter_box">
+								<h2 class="filter_heading">Availability <span>Clear</span></h2>
+								<p>You can opt below option for your treatment</p>
+								<ul>
+									<li class="checkbox">Home Visit <input type="checkbox" name="visit" value="" data-value=""><div class="check"></div></li>
+									<li class="checkbox">Clinic Visit <input type="checkbox" name="visit" value=""  data-value=""><div class="check"></div></li>
+								</ul>
+							</div>
+							<div class="filter_box">
+								<h2 class="filter_heading">Current Booking <span>Clear</span></h2>
+								<p>You can opt below option for your booking</p>
+								<ul>
+									<li class="checkbox">Instant Booking<input type="checkbox" name="booking" value="" data-value=""><div class="check"></div></li>
+									<li class="checkbox">Later Booking<input type="checkbox" name="booking" value=""  data-value=""><div class="check"></div></li>
+								</ul>
+							</div>
+							<div class="filter_box">
+								<h2 class="filter_heading">Booking Method <span>Clear</span></h2>
+								<p>You can opt below option for your booking method</p>
+								<ul>
+									<li class="checkbox">Pay at Clinic<input type="checkbox" name="bookmethod" value="" data-value=""><div class="check"></div></li>
+									<li class="checkbox">Instant Pay<input type="checkbox" name="bookmethod" value=""  data-value=""><div class="check"></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-9 col-xs-12">
+						<div class="search_top_row">
+							<div class="search_info">
+								<div class="search_result_no"><span>2322</span> matches found for:</div> 
+								<div class="search_result_txt"><span>Dentists</span> in <span>Mumbai</span></div>
+							</div>
+							<div class="sort_wrapper">
+								<span>Sort by: </span>
+								<div class="sort_by drop">
+									<div class="">
+										<span>Relevance</span>
+										<ul class="dropdown-menu drop_list sort_list">
+											<li>Price</li>
+											<li>Experience</li>
+											<li>Sample</li>
+											<li>Sample</li>
+										</ul>
+									</div>
+									<span><img src="assets/home/arrow_dwn.svg" alt="Chevron_down" title="Chevron_down"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="list_card">
+							<div class="card_top">
+								<div class="card_img_wrapper">
+									<img class="img-responsive" src="assets/icons/sample_doc_1.png" alt="doctor_picture" title="" />
+								</div>
+								<div class="card_info_wrapper">
+									<div class="card_name_wrapper">
+										<h1 class="card_name"><a href="doctor_detail.html">Dr. Sanjeev</a></h1>
+										<div class="repu_container">
+											<div class="like_box"><i class="fa fa-heart-o"></i><span>90</span>%</div>
+											<div class="like_count"><span>254</span>Ratings</div>
+										</div>
+									</div>
+									<div class="details_wrapper">
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/clinic_icon.png" alt="hospital"/>Hiranandani Hospital</li>
+											<li><img class="img-responsive" src="assets/icons/exp_icon.png" alt="experience"/>10Yrs of Experience</li>
+											<li><img class="img-responsive" src="assets/icons/time_icon.png" alt="time"/>10am - 08pm</li>
+											<li><img class="img-responsive" src="assets/icons/calendar_icon.png" alt="ccalendar"/>Monday to Friday</li>
+										</ul>
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/speciality_icon.png" alt="experience"/>DNB - Dermatology & Venereology Fellowship in Cosmetology </li>
+											<li><img class="img-responsive" src="assets/icons/distance_icon.png" alt="time"/>7km Away</li>
+											<li><img class="img-responsive" src="assets/icons/location_icon.png" alt="ccalendar"/>Hiranandani Hospital Road, Hill Side Avenue, Gardens, Powai, Mumbai, Maharashtra 400076</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card_bottom">
+								<div class="thumb_wrapper">
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+								</div>
+								<div class="book_wrapper">
+									<p class="doc_fee">$60.00</p>
+									<a class="button_style button book" href="doctor_booking.html">Book Appointment</a>
+								</div>
+							</div>
+						</div>
+						<div class="list_card">
+							<div class="card_top">
+								<div class="card_img_wrapper">
+									<img class="img-responsive" src="assets/icons/sample_doc_1.png" alt="doctor_picture" title="" />
+								</div>
+								<div class="card_info_wrapper">
+									<div class="card_name_wrapper">
+										<h1 class="card_name"><a href="doctor_detail.html">Dr. Sanjeev</a></h1>
+										<div class="repu_container">
+											<div class="like_box"><i class="fa fa-heart-o"></i><span>90</span>%</div>
+											<div class="like_count"><span>254</span>Ratings</div>
+										</div>
+									</div>
+									<div class="details_wrapper">
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/clinic_icon.png" alt="hospital"/>Hiranandani Hospital</li>
+											<li><img class="img-responsive" src="assets/icons/exp_icon.png" alt="experience"/>10Yrs of Experience</li>
+											<li><img class="img-responsive" src="assets/icons/time_icon.png" alt="time"/>10am - 08pm</li>
+											<li><img class="img-responsive" src="assets/icons/calendar_icon.png" alt="ccalendar"/>Monday to Friday</li>
+										</ul>
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/speciality_icon.png" alt="experience"/>DNB - Dermatology & Venereology Fellowship in Cosmetology </li>
+											<li><img class="img-responsive" src="assets/icons/distance_icon.png" alt="time"/>7km Away</li>
+											<li><img class="img-responsive" src="assets/icons/location_icon.png" alt="ccalendar"/>Hiranandani Hospital Road, Hill Side Avenue, Gardens, Powai, Mumbai, Maharashtra 400076</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card_bottom">
+								<div class="thumb_wrapper">
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+								</div>
+								<div class="book_wrapper">
+									<p class="doc_fee">$60.00</p>
+									<a class="button_style button book" href="doctor_booking.html">Book Appointment</a>
+								</div>
+							</div>
+						</div>
+						<div class="list_card">
+							<div class="card_top">
+								<div class="card_img_wrapper">
+									<img class="img-responsive" src="assets/icons/sample_doc_1.png" alt="doctor_picture" title="" />
+								</div>
+								<div class="card_info_wrapper">
+									<div class="card_name_wrapper">
+										<h1 class="card_name"><a href="doctor_detail.html">Dr. Sanjeev</a></h1>
+										<div class="repu_container">
+											<div class="like_box"><i class="fa fa-heart-o"></i><span>90</span>%</div>
+											<div class="like_count"><span>254</span>Ratings</div>
+										</div>
+									</div>
+									<div class="details_wrapper">
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/clinic_icon.png" alt="hospital"/>Hiranandani Hospital</li>
+											<li><img class="img-responsive" src="assets/icons/exp_icon.png" alt="experience"/>10Yrs of Experience</li>
+											<li><img class="img-responsive" src="assets/icons/time_icon.png" alt="time"/>10am - 08pm</li>
+											<li><img class="img-responsive" src="assets/icons/calendar_icon.png" alt="ccalendar"/>Monday to Friday</li>
+										</ul>
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/speciality_icon.png" alt="experience"/>DNB - Dermatology & Venereology Fellowship in Cosmetology </li>
+											<li><img class="img-responsive" src="assets/icons/distance_icon.png" alt="time"/>7km Away</li>
+											<li><img class="img-responsive" src="assets/icons/location_icon.png" alt="ccalendar"/>Hiranandani Hospital Road, Hill Side Avenue, Gardens, Powai, Mumbai, Maharashtra 400076</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card_bottom">
+								<div class="thumb_wrapper">
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+								</div>
+								<div class="book_wrapper">
+									<p class="doc_fee">$60.00</p>
+									<a class="button_style button book" href="doctor_booking.html">Book Appointment</a>
+								</div>
+							</div>
+						</div>
+						<div class="list_card">
+							<div class="card_top">
+								<div class="card_img_wrapper">
+									<img class="img-responsive" src="assets/icons/sample_doc_1.png" alt="doctor_picture" title="" />
+								</div>
+								<div class="card_info_wrapper">
+									<div class="card_name_wrapper">
+										<h1 class="card_name"><a href="doctor_detail.html">Dr. Sanjeev</a></h1>
+										<div class="repu_container">
+											<div class="like_box"><i class="fa fa-heart-o"></i><span>90</span>%</div>
+											<div class="like_count"><span>254</span>Ratings</div>
+										</div>
+									</div>
+									<div class="details_wrapper">
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/clinic_icon.png" alt="hospital"/>Hiranandani Hospital</li>
+											<li><img class="img-responsive" src="assets/icons/exp_icon.png" alt="experience"/>10Yrs of Experience</li>
+											<li><img class="img-responsive" src="assets/icons/time_icon.png" alt="time"/>10am - 08pm</li>
+											<li><img class="img-responsive" src="assets/icons/calendar_icon.png" alt="ccalendar"/>Monday to Friday</li>
+										</ul>
+										<ul>
+											<li><img class="img-responsive" src="assets/icons/speciality_icon.png" alt="experience"/>DNB - Dermatology & Venereology Fellowship in Cosmetology </li>
+											<li><img class="img-responsive" src="assets/icons/distance_icon.png" alt="time"/>7km Away</li>
+											<li><img class="img-responsive" src="assets/icons/location_icon.png" alt="ccalendar"/>Hiranandani Hospital Road, Hill Side Avenue, Gardens, Powai, Mumbai, Maharashtra 400076</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card_bottom">
+								<div class="thumb_wrapper">
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+									<img src="assets/icons/list_thumb.png" alt="thumbnails" title=""/>
+								</div>
+								<div class="book_wrapper">
+									<p class="doc_fee">$60.00</p>
+									<a class="button_style button book" href="doctor_booking.html">Book Appointment</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bg">
+	      <div class="container">
+	        <div class="main_footer_box">
+	          <div class="content_box">
+	            <div class="content">
+	              <div class="title_item">
+	                <div>ABOUT</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">About</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Blog</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Careers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Press</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Contact Us</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR PATIENETS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Ask free health questions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for doctors</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for hospitals</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for diagnostics</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR DOCTORS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Consult</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Health Feed</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">For clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Ray by Teleafya</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR HOSPITALS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Insta by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Qikwell by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Querent by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Reach</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>MORE</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Help</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Developers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Privacy Policy</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Terms &amp; Conditions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Healthcare directory</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="social_icons"><a href="https://www.facebook.com/teleafya/" target="_blank" class="icon"><img src="assets/home/facebook_icon.svg"></a><a href="https://plus.google.com/104835625733873407665" target="_blank" class="icon"><img src="assets/home/google_plus_icon.svg"></a><a href="#" class="icon"><img src="assets/home/instagram_icon.svg"></a><a href="https://www.youtube.com/channel/UCAd9mi97aHj3qMnhhlEsd_A" target="_blank" class="icon youtube"><img src="assets/home/youtube_icon.svg"></a></div>
+	        </div>
+	      </div>
+	      <div class="divider_footer"></div>
+	      <div class="container">
+	        <div class="copyright_box">
+	          <div class="text-block">© Copyright teleafya. Developed by : arvind patel. -Website Best viewed in IE 11 &amp; Higher, Google Chrome</div>
+	        </div>
+	      </div>
+	    </div>
+    	<script type="text/javascript">
+    		
+    	</script>
+	</body>
+</html>

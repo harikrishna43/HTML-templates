@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Doctor Details | Telafaya</title>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+	  <link rel="stylesheet" href="style.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://use.fontawesome.com/fedf2ad782.js"></script>
+	  <script src="custom.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  	<div class="container">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="col-xs-12 block_for_search">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="index.html"><img src="assets/home/logo.png" class="img-responsive" alt="Telafaya" title="Telafaya" /></a>
+				    </div>
+				    <form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="city_search drop">
+								<div>
+									<span><img src="assets/home/map.svg" alt="Location" title="Location" /></span>
+									<span>Mumbai</span>
+									<ul class="dropdown-menu drop_list city_list">
+										<li>Mumbai</li>
+										<li>Delhi</li>
+										<li>Chennai</li>
+										<li>Kolkata</li>
+									</ul>
+								</div>
+								<span><img src="assets/home/arrow_dwn.svg" alt="Chevron_down" title="Chevron_down" /></span>
+							</div>
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      	<ul class="nav navbar-nav navbar-right">
+					        <!-- <li><a class="button" href="#">Free Listing</a></li> -->
+					        <li>
+					        	<a href="#" class="userimage">
+					        		<img src="assets/home/user.svg" alt="User" title="User">
+					        		<span>Login/Register</span>
+					    	    </a>
+					    	</li>
+				      	</ul>
+				    </div>
+				</div>
+			</div>
+		</nav>
+		<div class="header_box">
+			<div class="container">
+				<form method="get" action="">
+						<input name="city" type="hidden" value="mumbai">
+                        <input name="searchfor" value="specialization" type="hidden">
+                        <input name="submit" value="submit" type="hidden">
+                        <div class="search_box">
+							<div class="looking_for_box">
+								<div class="looking_wrapper">
+									<div class="looking_for">
+										<input type="text" placeholder="I'm looking for" class="common_search doctor_search" name="home_search">
+									</div>
+								</div>
+								<ul class="drop_list looking_list">
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+									<li><a>Speciality</a></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+		    </div>
+		</div>
+		<div class="page_content colored_bg">
+			<div class="section section_1">
+				<div class="container">
+					<div class="breadcrumb_container col-xs-12">
+						<nav aria-label="breadcrumb" role="navigation">
+						  <ol class="breadcrumb">
+						    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+						    <li class="breadcrumb-item"><a href="#">Mumbai</a></li>
+						    <li class="breadcrumb-item"><a href="#">Dermatologists</a></li>
+						    <li class="breadcrumb-item active" aria-current="page">Dr.Sanjeev</li>
+						  </ol>
+						</nav>
+					</div>
+					<!-- <div id="rateYo"></div> -->
+					<div class="col-xs-12 details_container">
+						<div class="left_section">
+							<div class="visual_details">
+								<div class="dp_container">
+									<img src="assets/icons/sample_doc.png" class="img-responsive dp" alt="profile picture" />
+									<img src="assets/icons/verified.png" class="img-responsive verified" alt="profile picture" />
+								</div>
+								<div class="doc_name">
+									Dr. Sanjeev
+								</div>
+								<div class="doc_rating">
+									<div class="rateYo"></div>
+								</div>
+							</div>
+							<div class="info_summary">
+								<div class="info_top">
+									<div class="exp"><span>9yrs</span>Experience</div>
+									<div class="fee"><span>$60</span>Fee</div>
+								</div>
+								<div class="info_bottom">
+									<div class="spl"><span>Dentist</span>Specialisation</div>
+									<div class="edu"><span>MDS</span>Education</div>
+								</div>
+							</div>
+							<div class="contact_container">
+								<div class="contact_medium">
+									<img src="assets/icons/call_icon.png" class="img-responsive" alt="icon" title="" />
+									<img src="assets/icons/email_icon.png" class="img-responsive" alt="icon" title="" />
+									<img src="assets/icons/video_icon.png" class="img-responsive" alt="icon" title="" />
+									<img src="assets/icons/txt_icon.png" class="img-responsive" alt="icon" title="" />
+								</div>
+								<a class="button_style button book" href="doctor_booking.html">Book Appointment</a>
+							</div>
+						</div>
+						<div class="right_section">
+							<ul class="nav nav-tabs">
+							    <li class="active">
+							    	<a class="details_nav" data-toggle="tab" href="#home">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/details_active.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Basic Details</span>
+							    	</a>
+							    </li>
+							    <li>
+							    	<a class="details_nav" data-toggle="tab" href="#menu1">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/specialist_inactive.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Specialists</span>
+							    	</a>
+							    </li>
+							    <li>
+							    	<a class="details_nav" data-toggle="tab" href="#menu2">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/education_inactive.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Education</span>
+							    	</a>
+							    </li>
+							    <li>
+							    	<a class="details_nav" data-toggle="tab" href="#menu3">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/experience_inactive.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Experience</span>
+							    	</a>
+							    </li>
+							    <li>
+							    	<a class="details_nav" data-toggle="tab" href="#menu4">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/articles_inactive.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Articles</span>
+							    	</a>
+							    </li>
+							    <li>
+							    	<a class="details_nav" data-toggle="tab" href="#menu5">
+							    		<span class="bg_img"></span>
+							    		<!-- <img src="assets/icons/reviews_inactive.png" class="img-responsive" alt="" title=""/> -->
+							    		<span>Review</span>
+							    	</a>
+							    </li>
+							</ul>
+							<div class="tab-content">
+							    <div id="home" class="tab-pane fade in active">
+							    	<div class="doc_address">
+							    		<span>Address:</span>
+							    		<div>
+							    			Hiranandani Hospital Road, Hill Side Avenue, 
+											Powai, Mumbai, Maharashtra 400076
+							    		</div>
+							    	</div>
+							    	<div class="doc_timings">
+							    		<span>Timings:</span>
+							    		<div>
+							    			<ul>
+							    				<li><b>Mon - Sat</b><span>(10:30 AM - 15:30, 17:30 - 16:30)</span></li>
+							    				<li><b>Sun</b><span>(11:30 AM - 16:30PM)</span></li>
+							    			</ul>
+							    		</div>
+							    	</div>
+							    	<div class="doc_photos">
+							    		<span>Photos:</span>
+							    		<div class="thumb_wrapper">
+							    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+							    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+							    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+							    			<img src="assets/icons/list_thumb.png" class="img-responsive" alt="" title="" />
+							    		</div>
+							    	</div>
+							    	<div class="doc_map">
+							    		<span>Map:</span>
+							    		<div class="map_container">
+							    			<div id="map"></div>
+							    		</div>
+							    	</div>
+							    </div>
+							    <div id="menu1" class="tab-pane fade">
+							      	<div class="tab_content_section">
+								      	<ul class="side_bullets">
+										   <li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+										</ul>
+								      	<ul class="in_tab">
+								      		<li>
+								      			<h2>Anesthesiologist</h2>
+								      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								      		</li>
+								      		<li>
+								      			<h2>Nephrologist</h2>
+								      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								      		</li>
+								      		<li>
+								      			<h2>Anesthesiologist</h2>
+								      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								      		</li>
+								      		<li>
+								      			<h2>Nephrologist</h2>
+								      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								      		</li>
+								      		<li>
+								      			<h2>Anesthesiologist</h2>
+								      			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								      		</li>
+								      	</ul>
+							      	</div>
+							    </div>
+							    <div id="menu2" class="tab-pane fade">
+								    <div class="tab_content_section">
+									    <ul class="side_bullets">
+										   <li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+										</ul>
+									    <ul class="in_tab">
+									      		<li>
+									      			<h2>MBBS</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>BDS</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>BSc</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>BMS</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>MBA</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									     </ul>
+								    </div>
+							    </div>
+							    <div id="menu3" class="tab-pane fade">
+							       <div class="tab_content_section">
+									    <ul class="side_bullets">
+										   <li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+											<li><span></span></li>
+										</ul>
+									    <ul class="in_tab">
+									      		<li>
+									      			<h2>Head of Plastic Surgeon</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Columbia Asia Hospital</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>Lead Diagnostic Radiologist</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Deenanath Mangeshkar </span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>Senior Anesthesiologist</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Aditya Birla Memorial</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>Nephrologist</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Banaras Hindu University</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									      		<li>
+									      			<h2>Lead Diagnostic Radiologist</h2>
+									      			<p>
+									      				<span><img src="assets/icons/college_icon.png" class="img-responsive" alt="" title="">Aditya Birla Memorial</span>
+									      				<span><img src="assets/icons/location_icon.png" class="img-responsive" alt="" title="">Pune, Maharashtra</span>
+									      			</p>
+									      		</li>
+									     </ul>
+								    </div>
+							    </div>
+							    <div id="menu4" class="tab-pane fade">
+							      	<div class="shadow-effect">
+					              		<div class="section_heading">Taking care of your heart.</div>
+					                	<div class="section_sub_heading">Dramatically maintain clicks-and-mortar solutions without functional solutions.</div>
+					                	<div class="img_section"><img src="assets/home/dummy.png" alt="" title=""></div>
+						                <div class="doctor_box">
+						                	<div class="doctor_box_info">
+							                	<div class="likes"><span class="like_icon fa fa-heart"></span><span class="like_count">3567</span></div>
+							                	<div class="comment"><span class="comment_icon fa fa-comments"></span><span class="comment_count">7461</span></div>
+							                	<div class="share"><span class="share_icon fa fa-share-alt"></span><span class="share_count">1567</span></div>
+						                	</div>
+						                	<div class="star_right"><span class="star_right_icon fa fa-star"></span></div>
+						                </div>
+				              		</div>
+				              		<div class="shadow-effect">
+					              		<div class="section_heading">Taking care of your heart.</div>
+					                	<div class="section_sub_heading">Dramatically maintain clicks-and-mortar solutions without functional solutions.</div>
+					                	<div class="img_section"><img src="assets/home/dummy.png" alt="" title=""></div>
+						                <div class="doctor_box">
+						                	<div class="doctor_box_info">
+							                	<div class="likes"><span class="like_icon fa fa-heart"></span><span class="like_count">3567</span></div>
+							                	<div class="comment"><span class="comment_icon fa fa-comments"></span><span class="comment_count">7461</span></div>
+							                	<div class="share"><span class="share_icon fa fa-share-alt"></span><span class="share_count">1567</span></div>
+						                	</div>
+						                	<div class="star_right"><span class="star_right_icon fa fa-star"></span></div>
+						                </div>
+				              		</div>
+							    </div>
+							    <div id="menu5" class="tab-pane fade">
+							      	<div class="review_section_wrapper">
+								      	<div class="review_container">
+								      		<ul class="in_tab">
+										      	<li class="review_list">
+										      		<div class="img_container">
+								      					<img src="assets/icons/small_thumb.png" class="img-responsive" alt="" title="" />
+								      				</div>
+								      				<div class="review_content">
+								      					<div class="rateYo"></div>
+											      		<h2>Absolutely fantastic!</h2>
+											      		<p>
+											      			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+															when an unknown printer took a galley of type and scrambled it to make a type specimen 
+															book. It has survived not only five centuries, 
+											      		</p>
+										      		</div>
+										      	</li>
+										      	<li class="review_list">
+										      		<div class="img_container">
+								      					<img src="assets/icons/small_thumb.png" class="img-responsive" alt="" title="" />
+								      				</div>
+								      				<div class="review_content">
+								      					<div class="rateYo"></div>
+											      		<h2>Absolutely fantastic!</h2>
+											      		<p>
+											      			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+															when an unknown printer took a galley of type and scrambled it to make a type specimen 
+															book. It has survived not only five centuries, 
+											      		</p>
+										      		</div>
+										      	</li>
+										      	<li class="review_list">
+										      		<div class="img_container">
+								      					<img src="assets/icons/small_thumb.png" class="img-responsive" alt="" title="" />
+								      				</div>
+								      				<div class="review_content">
+								      					<div class="rateYo"></div>
+											      		<h2>Absolutely fantastic!</h2>
+											      		<p>
+											      			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+															when an unknown printer took a galley of type and scrambled it to make a type specimen 
+															book. It has survived not only five centuries, 
+											      		</p>
+										      		</div>
+										      	</li>
+										      	<li class="review_list">
+										      		<div class="img_container">
+								      					<img src="assets/icons/small_thumb.png" class="img-responsive" alt="" title="" />
+								      				</div>
+								      				<div class="review_content">
+								      					<div class="rateYo"></div>
+											      		<h2>Absolutely fantastic!</h2>
+											      		<p>
+											      			Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+															when an unknown printer took a galley of type and scrambled it to make a type specimen 
+															book. It has survived not only five centuries, 
+											      		</p>
+										      		</div>
+										      	</li>
+								      		</ul>
+								      	</div>
+								      	<div class="review_thumbs">
+								      			<span><i class="good fa fa-thumbs-up" aria-hidden="true"></i>452</span>
+								      			<span><i class="bad fa fa-thumbs-down" aria-hidden="true"></i>452</span>
+								      	</div>
+							      	</div>
+							    </div>
+							<div class="repu_container">
+								<div class="like_box"><i class="fa fa-heart-o"></i><span>90</span>%</div>
+								<div class="like_count"><span>254</span>Ratings</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bg">
+	      <div class="container">
+	        <div class="main_footer_box">
+	          <div class="content_box">
+	            <div class="content">
+	              <div class="title_item">
+	                <div>ABOUT</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">About</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Blog</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Careers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Press</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Contact Us</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR PATIENETS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Ask free health questions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for doctors</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for hospitals</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Search for diagnostics</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR DOCTORS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Consult</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Health Feed</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">For clinics</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Ray by Teleafya</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>FOR HOSPITALS</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Insta by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Qikwell by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Querent by Teleafya</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Profile</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Teleafya Reach</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	            <div class="content">
+	              <div class="title_item">
+	                <div>MORE</div>
+	                <div class="divider footer_divider"></div>
+	              </div>
+	              <div class="lists_item">
+	                <ul class="w-list-unstyled">
+	                  <li class="li"><a href="#" class="listes_link_items">Help</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Developers</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Privacy Policy</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Terms &amp; Conditions</a></li>
+	                  <li class="li"><a href="#" class="listes_link_items">Healthcare directory</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="social_icons"><a href="https://www.facebook.com/teleafya/" target="_blank" class="icon"><img src="assets/home/facebook_icon.svg"></a><a href="https://plus.google.com/104835625733873407665" target="_blank" class="icon"><img src="assets/home/google_plus_icon.svg"></a><a href="#" class="icon"><img src="assets/home/instagram_icon.svg"></a><a href="https://www.youtube.com/channel/UCAd9mi97aHj3qMnhhlEsd_A" target="_blank" class="icon youtube"><img src="assets/home/youtube_icon.svg"></a></div>
+	        </div>
+	      </div>
+	      <div class="divider_footer"></div>
+	      <div class="container">
+	        <div class="copyright_box">
+	          <div class="text-block">© Copyright teleafya. Developed by : arvind patel. -Website Best viewed in IE 11 &amp; Higher, Google Chrome</div>
+	        </div>
+	      </div>
+	    </div>
+    	<script>
+	      function initMap() {
+	        var uluru = {lat: -25.363, lng: 131.044};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 4,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+	      }
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+	    </script>
+	</body>
+</html>
